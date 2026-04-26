@@ -1,0 +1,535 @@
+/* src/pages/CartPage/CartPage.module.css */
+
+.cartPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/* Хлебные крошки */
+.breadcrumb {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.breadcrumbLink {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  color: #db4444;
+}
+
+.breadcrumbSeparator {
+  margin: 0 8px;
+  color: #999;
+}
+
+.breadcrumbActive {
+  color: #db4444;
+  font-weight: 500;
+}
+
+/* Заголовок страницы */
+.pageTitle {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #000;
+}
+
+/* Таблица корзины (десктоп) */
+.cartTable {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.cartHeader {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.5fr 1.5fr 0.5fr;
+  background: #f5f5f5;
+  padding: 16px 20px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.headerProduct {
+  text-align: left;
+}
+
+.headerPrice,
+.headerQuantity,
+.headerSubtotal,
+.headerAction {
+  text-align: center;
+}
+
+.cartItems {
+  background: #fff;
+}
+
+.cartRow {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.5fr 1.5fr 0.5fr;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.cartRow:hover {
+  background-color: #fafafa;
+}
+
+/* Информация о продукте */
+.productInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.productImage {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.productImage img,
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.productDetails {
+  flex: 1;
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+  color: #333;
+}
+
+.productId {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+/* Цена и количество */
+.productPrice,
+.productSubtotal {
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+}
+
+.productSubtotal {
+  color: #db4444;
+  font-weight: 600;
+}
+
+.productQuantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.quantityBtn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.quantityBtn:hover {
+  background: #db4444;
+  color: white;
+  border-color: #db4444;
+}
+
+.quantityValue {
+  min-width: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Кнопка удаления */
+.removeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  padding: 8px;
+}
+
+.removeButton:hover {
+  opacity: 1;
+  color: #db4444;
+}
+
+/* Кнопки действий */
+.cartActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.continueShopping {
+  padding: 12px 24px;
+  background: white;
+  border: 1px solid #db4444;
+  color: #db4444;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.continueShopping:hover {
+  background: #db4444;
+  color: white;
+}
+
+.clearCart {
+  padding: 12px 24px;
+  background: white;
+  border: 1px solid #999;
+  color: #666;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.clearCart:hover {
+  border-color: #db4444;
+  color: #db4444;
+}
+
+/* Сводка заказа */
+.orderSummary {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.summaryCard {
+  width: 100%;
+  max-width: 470px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.summaryTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #333;
+}
+
+.shippingNotice {
+  background: #fff3cd;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #856404;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.divider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 20px 0;
+}
+
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.summaryTotal span:last-child {
+  color: #db4444;
+}
+
+.checkoutButton {
+  width: 100%;
+  padding: 16px;
+  background: #db4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkoutButton:hover {
+  background: #c03535;
+}
+
+/* Способы оплаты */
+.paymentMethods {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.paymentMethods p {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.paymentIcons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.paymentIcons span {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Пустая корзина */
+.emptyCart {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.emptyCartIcon {
+  font-size: 80px;
+  margin-bottom: 24px;
+}
+
+.emptyCartTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.emptyCartText {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.continueShoppingLink {
+  display: inline-block;
+  padding: 12px 32px;
+  background: #db4444;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.continueShoppingLink:hover {
+  background: #c03535;
+}
+
+/* Мобильная версия */
+.mobileCart {
+  display: none;
+}
+
+/* Адаптивность */
+@media (max-width: 968px) {
+  .cartTable {
+    display: none;
+  }
+
+  .mobileCart {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  .mobileCartItem {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .mobileProductHeader {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .mobileProductImage {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  .mobileProductImage img,
+  .mobileProductImage .imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+  }
+
+  .mobileProductInfo {
+    flex: 1;
+  }
+
+  .mobileProductName {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #333;
+  }
+
+  .mobileProductPrice {
+    font-size: 18px;
+    font-weight: 600;
+    color: #db4444;
+    margin: 0;
+  }
+
+  .mobileRemoveButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  .mobileQuantitySection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .mobileQuantityLabel {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .mobileSubtotal {
+    font-size: 16px;
+  }
+
+  .mobileSubtotal strong {
+    color: #db4444;
+    margin-left: 8px;
+  }
+
+  .orderSummary {
+    justify-content: center;
+  }
+
+  .summaryCard {
+    max-width: 100%;
+  }
+
+  .cartActions {
+    flex-direction: column;
+  }
+
+  .continueShopping,
+  .clearCart {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cartPage {
+    padding: 20px 16px;
+  }
+
+  .pageTitle {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .mobileProductImage {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mobileProductName {
+    font-size: 14px;
+  }
+
+  .mobileProductPrice {
+    font-size: 16px;
+  }
+
+  .summaryCard {
+    padding: 16px;
+  }
+
+  .summaryTitle {
+    font-size: 18px;
+  }
+
+  .checkoutButton {
+    padding: 14px;
+  }
+}

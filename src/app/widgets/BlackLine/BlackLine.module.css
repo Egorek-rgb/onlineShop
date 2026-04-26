@@ -1,0 +1,222 @@
+/* BlackLine.module.css */
+
+.blackLine__wrapper {
+  background-color: #000000;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+}
+
+.blackLine {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.blackLine__mainText {
+  color: #fafafa;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  flex: 1;
+}
+
+.blackLine__bold {
+  font-weight: 600;
+  margin-left: 8px;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.blackLine__bold:hover {
+  opacity: 0.8;
+}
+
+.blackLine__language {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #fafafa;
+  font-size: 14px;
+  z-index: 10;
+}
+
+.blackLine__languageText {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.blackLine__languageText:hover {
+  opacity: 0.8;
+}
+
+.blackLine__arrowDown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.blackLine__arrowDown.rotated {
+  transform: rotate(180deg);
+}
+
+.blackLine__arrowDown img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+/* Dropdown стили */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 120px;
+  overflow: hidden;
+  z-index: 1000;
+  animation: fadeInDown 0.2s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  padding: 10px 16px;
+  color: #000000;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdownItem:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdownItem.active {
+  background-color: #db4444;
+  color: #ffffff;
+}
+
+.dropdownItem.active:hover {
+  background-color: #c03535;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 768px) {
+  .blackLine {
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .blackLine__mainText {
+    font-size: 11px;
+    text-align: left;
+  }
+
+  .blackLine__language {
+    gap: 4px;
+  }
+
+  .blackLine__languageText {
+    font-size: 12px;
+  }
+
+  .dropdown {
+    min-width: 100px;
+    right: -8px;
+  }
+
+  .dropdownItem {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Адаптация для мобильных телефонов */
+@media (max-width: 480px) {
+  .blackLine__wrapper {
+    height: auto;
+    min-height: 48px;
+    padding: 8px 0;
+  }
+
+  .blackLine {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .blackLine__mainText {
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .blackLine__bold {
+    margin-left: 4px;
+    display: inline-block;
+  }
+
+  .blackLine__language {
+    align-self: flex-end;
+  }
+
+  .blackLine__languageText {
+    font-size: 11px;
+  }
+
+  .blackLine__arrowDown img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .dropdown {
+    min-width: 90px;
+    right: -4px;
+  }
+
+  .dropdownItem {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 360px) {
+  .blackLine__mainText {
+    font-size: 9px;
+  }
+
+  .blackLine__bold {
+    font-size: 9px;
+  }
+}

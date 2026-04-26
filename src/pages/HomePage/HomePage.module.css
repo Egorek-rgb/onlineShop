@@ -1,0 +1,828 @@
+/* HomePage.module.css - Адаптированная версия */
+
+/* Глобальные стили */
+.homePage {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Навигация и слайдер */
+.homeNavigationAndSlider {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 20px;
+}
+
+.homeNavigation {
+  border-right: 1px solid black;
+}
+
+.navigation {
+  padding-top: 40px;
+  padding-right: 16px;
+}
+
+.navigation__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__listItem {
+  font-size: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navigation__listItem:hover {
+  color: #db4444;
+}
+
+.navigation__listItem:first-child {
+  display: flex;
+  gap: 51px;
+}
+
+.navigation__listItem:nth-child(2) {
+  display: flex;
+  gap: 76px;
+}
+
+/* Слайдер */
+.slider {
+  width: 892px;
+  height: 344px;
+  background-color: black;
+  margin-left: 45px;
+  margin-top: 40px;
+  color: white;
+  padding-left: 64px;
+  padding-top: 58px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__topSection {
+  display: flex;
+  gap: 36px;
+}
+
+.slider__bottomSection {
+  position: absolute;
+  top: 319px;
+  left: 353px;
+}
+
+.sliderWrapper {
+  overflow: hidden;
+}
+
+.sliderItem {
+  width: 496px;
+  transition: transform 0.3s ease;
+}
+
+.sliderItem img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Точки слайдера */
+.dotts {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dott {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dott:hover {
+  background-color: #b0b0b0;
+}
+
+.dottActive {
+  background-color: #ff6b00;
+  width: 14px;
+  height: 14px;
+}
+
+/* Контент слайдера */
+.mainContent {
+  flex: 1;
+}
+
+.mainContent__series {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.appleImg {
+  width: 40px;
+  height: 48px;
+}
+
+.nameOfIphone {
+  font-size: 16px;
+}
+
+.sale {
+  font-size: 48px;
+  line-height: 60px;
+  width: 294px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.shop {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.shopText {
+  text-decoration: underline;
+  line-height: 24px;
+  text-underline-offset: 4px;
+}
+
+/* Flash Sales секция */
+.flashSales {
+  margin-top: 150px;
+  padding: 0 20px;
+}
+
+.flashSales__head {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.flashSales__redRectangle {
+  width: 20px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #db4444;
+}
+
+.flashSales__today {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #db4444;
+}
+
+.flashSales__todayRedText {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.flashSales__timeText {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.flashSales__time {
+  display: flex;
+  gap: 87px;
+  align-items: flex-end;
+}
+
+.flashSales__timeWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flashSales__counterOfTime {
+  display: flex;
+  gap: 17px;
+}
+
+.days__text,
+.hours__text,
+.minutes__text,
+.seconds__text {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.days__number,
+.hours__number,
+.minutes__number,
+.seconds__number {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.flashSales__counterOfTimeDott {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #e07575;
+}
+
+.flashSales__counterOfTimeDotts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.flashSales__sliderArrows {
+  display: flex;
+  gap: 8px;
+}
+
+.flashSales__sliderLeftArrow,
+.flashSales__sliderRightArrow {
+  height: 46px;
+  width: 46px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.flashSales__sliderLeftArrow:hover,
+.flashSales__sliderRightArrow:hover {
+  transform: scale(1.1);
+  background-color: #e0e0e0;
+}
+
+.flashSales__sliderLeftArrow:active,
+.flashSales__sliderRightArrow:active {
+  transform: scale(0.95);
+}
+
+/* Слайдер товаров */
+.flashSales__sliderWrapper {
+  overflow-x: hidden;
+  margin-top: 40px;
+}
+
+.flashSales__slider {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.flashSales__slider::-webkit-scrollbar {
+  display: none;
+}
+
+.flashSales__sliderItem {
+  flex-shrink: 0;
+  width: 270px;
+}
+
+/* Карточка товара */
+.flashSales__itemWrapper {
+  background-color: #f5f5f5;
+  width: 270px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.flashSales__SliderItemBackground {
+  background-image: url("../../assets/gamepad.png");
+  width: 190px;
+  height: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.flashSales__sale {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #db4444;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 5;
+}
+
+.flashSales__icons {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 5;
+}
+
+.flashSales__icon {
+  width: 34px;
+  height: 34px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.flashSales__icon:hover {
+  transform: scale(1.1);
+}
+
+.flashSales__iconImg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Кнопка Add to Cart */
+.addToCartBtn {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  background: #db4444;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: bottom 0.3s ease-in-out;
+  font-family: inherit;
+  z-index: 10;
+}
+
+.flashSales__itemWrapper:hover .addToCartBtn {
+  bottom: 0;
+}
+
+.addToCartBtn:hover {
+  background: #c03535;
+}
+
+/* Описание товара */
+.flashSales__SliderItemDescription {
+  margin-top: 16px;
+}
+
+.flashSales__sliderItemName {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.flashSales__sliderItemcost {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.flashSales__sliderItemNewCost {
+  color: #db4444;
+  font-weight: 600;
+}
+
+.flashSales__sliderItemLastCost {
+  text-decoration: line-through;
+  color: #808080;
+  font-weight: 500;
+}
+
+.flashSales__sliderItemRaiting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flashSales__sliderItemStars {
+  display: flex;
+  gap: 4px;
+}
+
+.flashSales__sliderItemStarImg {
+  width: 16px;
+  height: 16px;
+}
+
+.flashSales__sliderItemNumOfFeedback {
+  font-size: 12px;
+  font-weight: 600;
+  color: #808080;
+}
+
+/* Уведомление */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  z-index: 1000;
+  animation: slideInRight 0.3s ease-out;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ============================================ */
+/* АДАПТИВНОСТЬ */
+/* ============================================ */
+
+/* Планшеты (768px - 1024px) */
+@media (max-width: 1024px) {
+  .homeNavigationAndSlider {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .homeNavigation {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+  }
+
+  .navigation {
+    padding: 20px 0;
+  }
+
+  .navigation__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .navigation__listItem {
+    margin-bottom: 0;
+  }
+
+  .navigation__listItem:first-child,
+  .navigation__listItem:nth-child(2) {
+    gap: 20px;
+  }
+
+  .slider {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    margin-left: 0;
+    padding: 30px;
+  }
+
+  .sale {
+    font-size: 36px;
+    line-height: 46px;
+    width: auto;
+  }
+
+  .flashSales__timeText {
+    font-size: 28px;
+  }
+
+  .flashSales__time {
+    gap: 40px;
+  }
+
+  .days__number,
+  .hours__number,
+  .minutes__number,
+  .seconds__number {
+    font-size: 24px;
+  }
+}
+
+/* Мобильные устройства (481px - 768px) */
+@media (max-width: 768px) {
+  .homeNavigationAndSlider {
+    padding: 0 12px;
+  }
+
+  .navigation__list {
+    gap: 12px;
+  }
+
+  .navigation__listItem {
+    font-size: 14px;
+  }
+
+  .slider {
+    padding: 20px;
+    min-height: 280px;
+  }
+
+  .slider__topSection {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mainContent__series {
+    gap: 12px;
+  }
+
+  .appleImg {
+    width: 30px;
+    height: 36px;
+  }
+
+  .nameOfIphone {
+    font-size: 14px;
+  }
+
+  .sale {
+    font-size: 28px;
+    line-height: 36px;
+    margin-top: 12px;
+  }
+
+  .sale br {
+    display: none;
+  }
+
+  .sliderItem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sliderItem img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .slider__bottomSection {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .flashSales {
+    margin-top: 60px;
+    padding: 0 12px;
+  }
+
+  .flashSales__head {
+    margin-bottom: 20px;
+  }
+
+  .flashSales__timeWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .flashSales__time {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .flashSales__timeText {
+    font-size: 24px;
+  }
+
+  .flashSales__counterOfTime {
+    flex-wrap: wrap;
+  }
+
+  .flashSales__sliderArrows {
+    align-self: flex-end;
+  }
+
+  .days__number,
+  .hours__number,
+  .minutes__number,
+  .seconds__number {
+    font-size: 20px;
+  }
+
+  .flashSales__counterOfTimeDotts {
+    display: none;
+  }
+
+  .flashSales__slider {
+    gap: 16px;
+  }
+
+  .flashSales__sliderItem {
+    width: 240px;
+  }
+
+  .flashSales__itemWrapper {
+    width: 240px;
+    height: 240px;
+  }
+
+  .flashSales__SliderItemBackground {
+    width: 160px;
+    height: 150px;
+  }
+
+  .flashSales__sliderItemName {
+    font-size: 14px;
+  }
+
+  .addToCartBtn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Маленькие мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+  .homeNavigationAndSlider {
+    padding: 0 10px;
+  }
+
+  .navigation__list {
+    gap: 8px;
+  }
+
+  .navigation__listItem {
+    font-size: 12px;
+  }
+
+  .slider {
+    padding: 15px;
+    min-height: 250px;
+  }
+
+  .sale {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .shop {
+    margin-top: 12px;
+  }
+
+  .shopText {
+    font-size: 14px;
+  }
+
+  .flashSales {
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+
+  .flashSales__todayRedText {
+    font-size: 14px;
+  }
+
+  .flashSales__redRectangle {
+    width: 16px;
+    height: 32px;
+  }
+
+  .flashSales__timeText {
+    font-size: 20px;
+  }
+
+  .days__text,
+  .hours__text,
+  .minutes__text,
+  .seconds__text {
+    font-size: 10px;
+  }
+
+  .days__number,
+  .hours__number,
+  .minutes__number,
+  .seconds__number {
+    font-size: 18px;
+  }
+
+  .flashSales__sliderLeftArrow,
+  .flashSales__sliderRightArrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .flashSales__sliderLeftArrow img,
+  .flashSales__sliderRightArrow img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .flashSales__sliderItem {
+    width: 200px;
+  }
+
+  .flashSales__itemWrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .flashSales__SliderItemBackground {
+    width: 130px;
+    height: 120px;
+  }
+
+  .flashSales__sale {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+
+  .flashSales__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .flashSales__iconImg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .flashSales__sliderItemName {
+    font-size: 12px;
+  }
+
+  .flashSales__sliderItemNewCost,
+  .flashSales__sliderItemLastCost {
+    font-size: 12px;
+  }
+
+  .addToCartBtn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .notification {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Очень маленькие экраны (до 360px) */
+@media (max-width: 360px) {
+  .flashSales__sliderItem {
+    width: 180px;
+  }
+
+  .flashSales__itemWrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .flashSales__SliderItemBackground {
+    width: 110px;
+    height: 100px;
+  }
+
+  .flashSales__sliderItemName {
+    font-size: 11px;
+  }
+
+  .flashSales__sliderItemNewCost,
+  .flashSales__sliderItemLastCost {
+    font-size: 11px;
+  }
+
+  .addToCartBtn {
+    font-size: 10px;
+    padding: 6px;
+  }
+}

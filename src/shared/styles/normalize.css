@@ -1,0 +1,347 @@
+/* ============================================
+   NORMALIZE CSS - Сохраняет полезные стили
+   Исправляет баги и делает стили единообразными
+   ============================================ */
+
+/* Document
+   ============================================ */
+
+/**
+ * 1. Исправляем высоту строки во всех браузерах
+ * 2. Предотвращаем изменение размера шрифта после поворота экрана на iOS
+ */
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Sections
+   ============================================ */
+
+/**
+ * Убираем margin во всех браузерах
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Рендерим элемент main корректно в IE
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Исправляем размер шрифта и margin для h1
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ============================================ */
+
+/**
+ * 1. Добавляем правильный размер коробки в Firefox
+ * 2. Показываем переполнение в Edge и IE
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/**
+ * 1. Исправляем наследование масштаба шрифта во всех браузерах
+ * 2. Исправляем размер em во всех браузерах
+ */
+
+pre {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+/* Text-level semantics
+   ============================================ */
+
+/**
+ * Убираем серый фон у активных ссылок в IE 10
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Убираем нижнюю границу в Chrome, Edge, Safari
+ * 2. Добавляем правильное оформление текста
+ */
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/**
+ * Добавляем правильный вес шрифта в Chrome, Edge, Safari
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Исправляем наследование масштаба шрифта во всех браузерах
+ * 2. Исправляем размер em во всех браузерах
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+/**
+ * Добавляем правильный размер шрифта во всех браузерах
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Предотвращаем влияние sub и sup на высоту строки во всех браузерах
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ============================================ */
+
+/**
+ * Убираем границу у изображений внутри ссылок в IE 10
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ============================================ */
+
+/**
+ * 1. Исправляем наследование шрифтов в Firefox
+ * 2. Исправляем отсутствие границ в Safari
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/**
+ * Показываем переполнение в Edge и IE
+ */
+
+button,
+input {
+  overflow: visible;
+}
+
+/**
+ * Убираем наследование text-transform в Edge, Firefox, IE
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Исправляем невозможность стилизации кликабельных типов в iOS и Safari
+ * 2. Добавляем правильный вид для кнопок в Firefox
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Убираем внутреннюю границу и padding в Firefox
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Восстанавливаем стили фокуса, которые были удалены предыдущим правилом
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Исправляем padding в Firefox
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Исправляем обертку текста в Edge и IE
+ * 2. Исправляем наследование цвета от legend в Chrome, Edge, Safari
+ */
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+/**
+ * Добавляем правильное вертикальное выравнивание в Chrome, Firefox, Opera
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Убираем стандартную вертикальную полосу прокрутки в IE 10+
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Добавляем правильный размер коробки в IE 10
+ * 2. Убираем padding в IE 10
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/**
+ * Исправляем стиль курсора для кнопок увеличения/уменьшения в Chrome
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Исправляем странный вид в Chrome, Edge, Safari
+ * 2. Исправляем стиль outline в Safari
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/**
+ * Убираем внутренний padding в Chrome, Edge, Safari на macOS
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Исправляем невозможность стилизации кликабельных типов в iOS и Safari
+ * 2. Добавляем правильный вид в iOS
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* Interactive
+   ============================================ */
+
+/*
+ * Добавляем правильное отображение в Edge, IE, Firefox
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Добавляем правильное отображение во всех браузерах
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ============================================ */
+
+/**
+ * Добавляем правильное отображение в IE 10+
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Добавляем правильное отображение в IE 10
+ */
+
+[hidden] {
+  display: none;
+}

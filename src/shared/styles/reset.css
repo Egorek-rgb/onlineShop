@@ -1,0 +1,99 @@
+/* ============================================
+   RESET CSS - Полный сброс всех стилей
+   Убирает все браузерные стили по умолчанию
+   ============================================ */
+
+/* Удаляем все отступы и поля */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Убираем стандартные стили списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Убираем подчеркивание у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Убираем границы у изображений */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Наследуем шрифты для полей ввода */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+}
+
+/* Убираем стандартные стили кнопок */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Убираем стандартные стили для таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Убираем кавычки у цитат */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}
+
+/* Базовые настройки для html и body */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Убираем анимацию для тех, кто предпочитает их отключить */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
