@@ -1,5 +1,4 @@
 // src/pages/CartPage/CartPage.tsx
-import React from "react";
 import { useCart } from "../../app/context/CartContext";
 import styles from "./CartPage.module.css";
 import { Link } from "react-router-dom";
